@@ -1,6 +1,6 @@
 const fs = require("fs")
 const inquirer = require("inquirer");
-const {shape, Circle, Rectangle, Square, Triangle} = require ("./lib/shapes");
+const {Shape, Circle, Rectangle, Square, Triangle} = require ("./lib/shapes");
 
 const questions = [
     {
@@ -31,3 +31,37 @@ const questions = [
     },
 ];
 
+inquirer.prompt(questions).then (answers) => {
+    const {text, textColor, shape, shapeColor} = answers;
+    const shapeObject = new  Shape()
+    let svgEl = "";
+
+    shapeObject. setColor(shapeColor);
+
+    switch (shape) {
+        case "Circle":
+            const circle = new Circle();
+            circle.setColor(shapeColor);
+            svgEl = circle.render();
+            break;
+
+        case "Circle":
+            const circle = new Circle();
+            circle.setColor(shapeColor);
+            svgEl = circle.render();
+            break;
+
+        case "Circle":
+            const circle = new Circle();
+            circle.setColor(shapeColor);
+            svgEl = circle.render();
+            break;
+    
+        case "Circle":
+            const circle = new Circle();
+            circle.setColor(shapeColor);
+            svgEl = circle.render();
+            break;
+
+    }
+}
