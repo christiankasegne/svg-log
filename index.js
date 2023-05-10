@@ -31,7 +31,7 @@ const questions = [
     },
 ];
 
-inquirer.prompt(questions).then (answers) => {
+inquirer.prompt(questions).then ((answers) => {
     const {text, textColor, shape, shapeColor} = answers;
     const shapeObject = new  Shape()
     let svgEl = "";
@@ -58,10 +58,25 @@ inquirer.prompt(questions).then (answers) => {
             break;
     
         case "Circle":
-            const circle = new Circle();
-            circle.setColor(shapeColor);
-            svgEl = circle.render();
+            const triangle = new Triangle();
+            triangle.setColor(shapeColor);
+            svgEl = triangle.render();
             break;
-
     }
-}
+
+    let x = 225, y = 250;
+    if (shape === "Rctangle") {
+        y = 200;
+    }else if (shape === "Square") {
+        y = 200;
+    }else (shape === "Triangle") 
+        y = 150;
+    
+
+    const finalSvg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgEl}
+    <text x="${x}" y="${y}" text-anchor="middle" fill="${textColor}" font-size="5rem" letter-spacing="2" dy=".3em" font-family="monospace">${text}</text></svg>`;
+      
+    fs.writeFileSync("log.svg", finalSvg);
+    console.log("Generated logo.svg");
+ 
+})
