@@ -45,16 +45,16 @@ inquirer.prompt(questions).then (answers) => {
             svgEl = circle.render();
             break;
 
-        case "Circle":
-            const circle = new Circle();
-            circle.setColor(shapeColor);
-            svgEl = circle.render();
+        case "Rectangle":
+            const rectangle = new Rectangle();
+            rectangle.setColor(shapeColor);
+            svgEl = rectangle.render();
             break;
 
-        case "Circle":
-            const circle = new Circle();
-            circle.setColor(shapeColor);
-            svgEl = circle.render();
+        case "Square":
+            const square = new Square();
+            square.setColor(shapeColor);
+            svgEl = square.render();
             break;
     
         case "Circle":
