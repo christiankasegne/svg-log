@@ -7,7 +7,7 @@ const questions = [
         type: "input",
         name: "text",
         message: "Enter text for the logo. (Must not be more than three characters.)",
-        validate: (input) => input.Length <= 3,
+        // validate: (input) => input.Length <= 3,
 
     },
     {
@@ -26,7 +26,7 @@ const questions = [
     {
         type: "input",
         name: "shapeColor",
-        message: "Enter a text color (keyword or hex)",
+        message: "Enter a shape color (keyword or hex)",
 
     },
 ];
@@ -57,24 +57,24 @@ inquirer.prompt(questions).then ((answers) => {
             svgEl = square.render();
             break;
     
-        case "Circle":
+        case "Triangle":
             const triangle = new Triangle();
             triangle.setColor(shapeColor);
             svgEl = triangle.render();
             break;
     }
 
-    let x = 225, y = 250;
+    let x = 150, y = 120;
     if (shape === "Rctangle") {
-        y = 200;
+        y = 145;
     }else if (shape === "Square") {
-        y = 200;
+        y = 145;
     }else (shape === "Triangle") 
-        y = 150;
+        y = 135;
     
 
-    const finalSvg = `<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgEl}
-    <text x="${x}" y="${y}" text-anchor="middle" fill="${textColor}" font-size="5rem" letter-spacing="2" dy=".3em" font-family="monospace">${text}</text></svg>`;
+    const finalSvg = `<svg  xmlns="http://www.w3.org/2000/svg" width="300" height="200">${svgEl}
+    <text x="${x}" y="${y}" text-anchor="middle" fill="${textColor}" font-size="5rem" font-family="monospace">${text}</text></svg>`;
       
     fs.writeFileSync("log.svg", finalSvg);
     console.log("Generated logo.svg");
