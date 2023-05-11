@@ -28,7 +28,7 @@ MIT license
 
 ![`Circle`](./example/circle.svg)
 ![`Rectangle`](./example/rectangle.svg)
-![`Square`](./example/square.svg)
+![`Square`](./example/Square.svg)
 ![`Triangle`](./example/triangle.svg)
 
 ## Video Link
