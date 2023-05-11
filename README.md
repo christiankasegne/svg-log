@@ -35,5 +35,5 @@ MIT license
 https://drive.google.com/file/d/1NXJtC2FVagVEEy4mdKtxKNoh7dpDetvI/view
 
 ## Githug link
-Site : https://github.com/christiankasegne/svg-log
-Repository :
+Repository : https://github.com/christiankasegne/svg-log
+
