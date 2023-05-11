@@ -7,7 +7,7 @@ const questions = [
         type: "input",
         name: "text",
         message: "Enter text for the logo. (Must not be more than three characters.)",
-        // validate: (input) => input.Length <= 3,
+        
 
     },
     {
