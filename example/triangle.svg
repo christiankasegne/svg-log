@@ -1,2 +1,2 @@
-<svg  xmlns="http://www.w3.org/2000/svg" width="300" height="200"><polygon points="150 50, 50 150, 250 150" style="fill:orange"/>
+<svg  xmlns="http://www.w3.org/2000/svg" width="300" height="200"><polygon points="150 0, 0 150, 300 150" style="fill:orange"/>
     <text x="150" y="135" text-anchor="middle" fill="black" font-size="5rem" font-family="monospace">CBK</text></svg>
